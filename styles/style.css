@@ -335,6 +335,28 @@ button {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .section__content {
+    grid-column: auto;
+  }
+
+  .factors {
+    grid-template-columns: 1fr;
+  }
+
+  .factors .section__content {
+    grid-column: auto;
+  }
+
+  .factors .section__title {
+    max-inline-size: 236px;
+  }
+}
+
 @media (min-width: 1024px) {
   .factors__content {
     grid-template-columns: repeat(3, minmax(0, 1fr));
