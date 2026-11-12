@@ -166,7 +166,7 @@ button {
   font-size: clamp(120px, 0.5625rem + 15vw, 157px);
   font-weight: 700;
   line-height: 0.83;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 #ff0070;
 }
 
 .header__description {
@@ -197,7 +197,7 @@ button {
 .section__title {
   max-inline-size: 300px;
   color: var(--main-color);
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 1.3;
 }
 
@@ -218,7 +218,7 @@ button {
 }
 
 .card__title {
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 1.3;
 }
 
@@ -249,7 +249,7 @@ button {
 }
 
 .factors .section__title {
-  max-inline-size: none;
+  max-inline-size: 33.333%;
 }
 
 .tips__content {
@@ -258,7 +258,7 @@ button {
 }
 
 .tips__lead {
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 1.3;
 }
 
@@ -268,7 +268,7 @@ button {
 
 .gallery__title {
   margin-block-end: 20px;
-  font-size: 1.8rem;
+  font-size: 18px;
 }
 
 .gallery__grid {
@@ -286,7 +286,8 @@ button {
 .gallery__item img {
   display: block;
   inline-size: 100%;
-  block-size: auto;
+  block-size: 100%;
+  object-fit: cover;
 }
 
 .gallery__item_sunset {
@@ -316,7 +317,7 @@ button {
   font-size: clamp(120px, 0.5625rem + 15vw, 157px);
   font-weight: 700;
   line-height: 0.83;
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 #ff0070;
 }
 
 @media (min-width: 768px) {
@@ -379,6 +380,10 @@ button {
     font-size: 116px;
   }
 
+  .header__title {
+    margin-inline-start: 0;
+  }
+
   .header__description {
     max-inline-size: 100%;
   }
@@ -398,6 +403,10 @@ button {
   }
 
   .section__title {
+    max-inline-size: 100%;
+  }
+
+  .factors .section__title {
     max-inline-size: 100%;
   }
 
