@@ -1,4 +1,11 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  color-scheme: dark light;
+  --page-color: #000028;
+  --page-image: url("../images/cover-image-dark.png");
+  --text-color: #f1b2ce;
+  --title-color: #db00ff;
+  --accent-color: #ff0070;
+  --decor-text: #000028;
+  --rec-display: inline;
+  --text-size: 18px;
+}
