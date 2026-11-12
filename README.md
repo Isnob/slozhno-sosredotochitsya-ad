@@ -5,3 +5,7 @@
 ## Запуск
 
 Откройте `index.html` в браузере.
+
+## Репозиторий
+
+https://github.com/Isnob/slozhno-sosredotochitsya-ad
