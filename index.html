@@ -1,40 +1,92 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="ru" class="theme-auto">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#000028" />
     <title>Сложно сосредоточиться</title>
-    <script src="./scripts/script.js"></script>
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/dark.css" />
+    <link rel="stylesheet" href="./styles/light.css" />
+    <script src="./scripts/script.js" defer></script>
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <nav class="header__theme-menu">
+      <nav class="header__theme-menu" aria-label="Цветовая тема">
         <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              День
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              Авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              Неон
-            </button>
-          </li>
+          <li><button class="header__theme-menu-button header__theme-menu-button_type_light" type="button" data-theme="light">День</button></li>
+          <li><button class="header__theme-menu-button header__theme-menu-button_type_auto header__theme-menu-button_active" type="button" data-theme="auto" aria-pressed="true">Авто</button></li>
+          <li><button class="header__theme-menu-button header__theme-menu-button_type_dark" type="button" data-theme="dark">Неон</button></li>
         </ul>
       </nav>
+      <span class="header__rec" aria-hidden="true">REC</span>
+      <h1 class="header__title">no focus</h1>
+      <p class="header__description title-decor">Почему сосредоточиться так сложно?</p>
+      <span class="decorated-zone__corner decorated-zone__corner_position_top" aria-hidden="true"></span>
+      <span class="decorated-zone__corner decorated-zone__corner_position_bottom" aria-hidden="true"></span>
     </header>
+
+    <main class="main-content">
+      <section class="section reasons" aria-labelledby="reasons-title">
+        <h2 class="section__title" id="reasons-title">Почему сосредоточиться сложно</h2>
+        <div class="section__content">
+          <article class="card">
+            <h3 class="card__title title-decor">Многозадачность</h3>
+            <p class="card__text">Кажется, что можно делать несколько дел одновременно. На деле мозг быстро переключается между задачами и тратит силы на каждое переключение. В результате сложнее удерживать внимание и доводить начатое до конца.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title title-decor">Дофаминовая яма</h3>
+            <p class="card__text">Лента новостей и короткие видео постоянно предлагают новые стимулы. После них обычная задача кажется скучной. Попробуйте убрать уведомления и оставить для отдыха отдельное время.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title title-decor">Переизбыток информации</h3>
+            <p class="card__text">Когда вокруг слишком много новостей, сообщений и вкладок, внимание распыляется. Выберите одну задачу, запишите остальные и возвращайтесь к списку после завершения.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section tips" aria-labelledby="tips-title">
+        <h2 class="section__title" id="tips-title">Как концентрироваться лучше</h2>
+        <div class="section__content tips__content">
+          <h3 class="tips__lead title-decor">Представьте, что концентрация — это мышца. Её можно и нужно тренировать.</h3>
+          <div class="tips__cards">
+            <article class="card">
+              <h3 class="card__title title-decor">Прогуляйтесь</h3>
+              <p class="card__text">Идеально — выйти на улицу. Можно совместить прогулку с аудиокнигой, подкастом или музыкой. Попробуйте просто смотреть по сторонам и замечать детали: это помогает переключиться.</p>
+            </article>
+            <article class="card">
+              <h3 class="card__title title-decor">Хорошо ешьте</h3>
+              <p class="card__text">Мы — не биороботы. Если не давать мозгу достаточно энергии, ему будет сложнее сосредоточиться. Не забывайте про регулярную еду и воду.</p>
+            </article>
+            <article class="card">
+              <h3 class="card__title title-decor">Читайте</h3>
+              <p class="card__text">Чтение помогает дольше удерживать внимание на одной задаче. Начните с нескольких страниц и постепенно увеличивайте время, которое проводите с книгой.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery" aria-labelledby="gallery-title">
+        <h2 class="section__title visually-hidden" id="gallery-title">А можно в картинках?</h2>
+        <div class="gallery__grid">
+          <figure class="gallery__item gallery__item_sunset"><img src="./images/sunset.png" alt="Закат над морем" loading="lazy" /></figure>
+          <figure class="gallery__item gallery__item_ice-cream"><img src="./images/ice-cream.png" alt="Мороженое с ягодами" loading="lazy" /></figure>
+          <figure class="gallery__item gallery__item_tape"><img src="./images/tape.png" alt="Кассетный плеер и наушники" loading="lazy" /></figure>
+          <figure class="gallery__item gallery__item_books"><img src="./images/books.png" alt="Стопка книг" loading="lazy" /></figure>
+          <figure class="gallery__item gallery__item_street"><img src="./images/street.png" alt="Улица в тёплом вечернем свете" loading="lazy" /></figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer decorated-zone">
+      <span class="decorated-zone__corner decorated-zone__corner_position_top" aria-hidden="true"></span>
+      <span class="decorated-zone__corner decorated-zone__corner_position_bottom" aria-hidden="true"></span>
+      <p class="footer__title">focus</p>
+    </footer>
   </body>
 </html>
